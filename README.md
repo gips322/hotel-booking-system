@@ -98,41 +98,24 @@ ConsoleApp # Презентационный слой
 
 
 
-\### 5. Краткое описание классов
 
+### 4. Краткое описание классов
 
+| Класс | Назначение | Ключевые методы |
+|-------|------------|-----------------|
+| `BaseEntity` | Базовый контракт для всех сущностей | `get_id()`, `to_dict()`, `from_dict()` |
+| `Person` | Абстрактный класс для человека | `get_name()`, `get_contact()`, `get_info()` |
+| `Guest` | Модель гостя | `add_loyalty_points()`, `get_loyalty_points()` |
+| `Hotel` | Модель гостиницы | `add_room()`, `remove_room()`, `get_rooms()` |
+| `Room` | Модель номера | `set_price()`, `set_maintenance()`, `is_available_for_booking()` |
+| `Booking` | Модель бронирования | `overlaps()`, `get_nights_count()`, `set_status()` |
+| `BookingManager` | Бизнес-логика | `create_booking()`, `cancel_booking()` |
+| `JsonRepository` | Слой персистентности | `add()`, `get_by_id()`, `get_all()`, `update()` |
+| `AvailabilityChecker` | Проверка доступности | `is_room_free()` |
+| `ConsoleApp` | Консольный интерфейс | Цикл меню, маршрутизация |
 
-| Класс / Модуль | Назначение | Ключевые методы |
+### 5. Диаграмма классов
 
-|----------------|------------|-----------------|
-
-| `BaseEntity` | Базовый контракт для всех сущностей | `get\_id()`, `to\_dict()`, `from\_dict()`, `update\_timestamp()` |
-
-| `Person` | Абстрактный класс для человека | `get\_name()`, `get\_contact()`, `get\_info()` (abstract) |
-
-| `Guest` | Модель гостя (наследник Person) | `add\_loyalty\_points()`, `get\_loyalty\_points()` |
-
-| `Hotel` | Модель гостиницы | `add\_room()`, `remove\_room()`, `get\_rooms()` |
-
-| `Room` | Модель номера | `set\_price()`, `set\_maintenance()`, `is\_available\_for\_booking()` |
-
-| `Booking` | Модель бронирования | `overlaps()`, `get\_nights\_count()`, `set\_status()` |
-
-| `BookingManager` | Оркестратор бизнес-логики | `create\_booking()`, `cancel\_booking()`, проверка конфликтов |
-
-| `JsonRepository` | Слой персистентности (Generic) | `add()`, `get\_by\_id()`, `get\_all()`, `remove\_by\_id()`, `update()` |
-
-| `AvailabilityChecker` | Проверка доступности номеров | `is\_room\_free()` |
-
-| `ConsoleApp` | Консольный интерфейс | Цикл меню, маршрутизация действий |
-
-
-
-\---
-
-
-
-\### 6. Диаграмма классов
 
 ┌─────────────────────────────────────────────────────────────────┐
 
@@ -259,11 +242,11 @@ ConsoleApp # Презентационный слой
 └─────────────────────────────────────────────────────────────────┘
 
 
-\---
 
+---
 
+## 🏗️ Структура проекта
 
-\## 🏗️ Структура проекта
 
 hotel\_booking/
 
@@ -307,36 +290,20 @@ hotel\_booking/
 
 
 
-\---
+
+---
+
+## 🚀 Запуск и использование
+
+### Требования
+- Python 3.8+
+- Только стандартная библиотека
+
+### Установка и запуск
 
 
-
-\## 🚀 Запуск и использование
-
-
-
-\### Требования
-
-\- Python 3.8+
-
-\- Только стандартная библиотека (stdlib)
-
-
-
-\### Установка и запуск
-
-
-
-```bash
-
-\# Клонирование репозитория
-
+git clone https://github.com/gips322/hotel-booking-system.git
 cd hotel-booking-system
-
-
-
-\# Запуск приложения
-
 python main.py
 
 
