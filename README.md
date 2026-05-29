@@ -298,14 +298,11 @@ hotel\_booking/
 
 ### Установка и запуск
 
-
-git clone https://github.com/gips322/hotel-booking-system.git
-
-
-cd hotel-booking-system
-
-
-python main.py
+1. Скопируйте файлы проекта в рабочую директорию
+2. Запустите приложение:
+   ```bash
+   python main.py
+   ```
 
 
 Пример рабочего процесса
@@ -327,7 +324,6 @@ python main.py
 ### Хранение данных
 
 
-Формат данных
 Все данные сохраняются в папке data/ в отдельных JSON файлах:
 
 ## hotels.json — гостиницы и номера:
