@@ -335,7 +335,7 @@ python main.py
 
 
 
-[
+```json
   {
     "hotel_id": "H001",
     "name": "Гранд Отель",
@@ -350,7 +350,7 @@ python main.py
       }
     ]
   }
-]
+```
 
 
 
@@ -361,7 +361,7 @@ python main.py
 
 
 
-[
+```json
   {
     "guest_id": "G001",
     "name": "Иванов Петр Сергеевич",
@@ -369,8 +369,7 @@ python main.py
     "email": "ivanov@example.com",
     "loyalty_points": 150
   }
-]
-
+```
 
 
 
@@ -379,7 +378,7 @@ python main.py
 
 
 
-[
+```json
   {
     "booking_id": "H001_101_G001_20260101120000",
     "hotel_id": "H001",
@@ -390,7 +389,7 @@ python main.py
     "total_price": 20000,
     "status": "active"
   }
-]
+```
 
 
 
